@@ -1,0 +1,241 @@
+.tabs-box {
+  width: 770px;
+  background: #fff;
+  margin-right: 20px;
+  height: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.el-tabs--top {
+  height: 100%;
+}
+.is-top {
+  height: calc(100% - 15px);
+}
+.ant-tabs {
+  height: 100%;
+}
+.el-tabs__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 135px;
+}
+.ant-tabs-content-holder {
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.right-content {
+  width: 370px;
+}
+.task {
+  background: #fff;
+  height: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.v-task {
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+.title {
+  height: 44px;
+  line-height: 44px;
+  margin: 0 20px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  text-align: left;
+}
+.content-box {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  margin-bottom: 10px;
+}
+.no-task {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.no-task p {
+  color: #777;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.no-task .add {
+  color: #3e84e9;
+  cursor: pointer;
+}
+.schedule {
+  background: #fff;
+  min-height: 400px;
+  padding: 0 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+.schedule-calendar {
+  padding-bottom: 20px;
+}
+.schedule-calendar .rt {
+  float: right;
+  margin-right: 0;
+  color: #3e84e9;
+  cursor: pointer;
+}
+.task-content {
+  margin: 21px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.name-time {
+  width: 89%;
+  float: left;
+  text-align: left;
+}
+.task-name {
+  margin-bottom: 8px;
+  margin-right: 6px;
+  display: inline-block;
+  width: 100%;
+}
+.item-name {
+  width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+}
+.rt {
+  margin-right: 0;
+  float: left;
+}
+.type-color {
+  display: inline-block;
+  text-align: center;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+}
+
+.wh_content_item {
+  color: #333;
+  font-size: 14px;
+  margin-top: 3px;
+  height: 30px;
+  position: relative;
+}
+.wh_item_date {
+  background: transparent;
+}
+.site-calendar-demo-card {
+  width: 300px;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+}
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border-radius: 50%;
+}
+.ant-picker-cell .ant-picker-cell-inner {
+  border-radius: 50%;
+}
+
+.tabs-content {
+  height: 100%;
+  margin: 0 30px;
+}
+.tabs-content .list {
+  overflow: hidden;
+  font-size: 13px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+.tabs-content .list:first-child {
+  padding-top: 5px;
+}
+.tabs-content .div-photo {
+  width: 35px;
+  height: 35px;
+  border-radius: 17.5px;
+  float: left;
+}
+.div-photo {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.img-text {
+  height: 100%;
+  margin-left: 50px;
+}
+.name-time {
+  display: inline-block;
+}
+.name-behavior {
+  margin-bottom: 6px;
+}
+.name {
+  font-size: 15px;
+  color: #333;
+  margin-right: 10px;
+}
+.behavior {
+  color: #666;
+}
+.time {
+  color: #999;
+  font-size: 12px;
+}
+.tabs-content .list .img-text .log-title {
+  float: right;
+  margin-top: 6px;
+}
+.tabs-content .list .img-text .h-title {
+  margin: 20px 0 0;
+  color: #3e84e9;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+  background-color: #f7f7fd;
+  padding: 10px;
+  border-radius: 2px;
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+.tabs-content .list .img-text .log-title img {
+  margin-bottom: 3px;
+  vertical-align: middle;
+  width: 20px;
+}
+.ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 15px;
+}
+.ant-tabs-tab {
+  margin: 0 15px;
+}
+.ant-tabs-top > .ant-tabs-nav,
+.ant-tabs-bottom > .ant-tabs-nav,
+.ant-tabs-top > div > .ant-tabs-nav,
+.ant-tabs-bottom > div > .ant-tabs-nav {
+  margin: 0 15px 15px;
+}
