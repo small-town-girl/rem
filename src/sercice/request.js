@@ -78,10 +78,8 @@ instance.interceptors.response.use(res=>{
             return {};
     }
 },err => {
-    
         hiddenLoading()
-    return console.log(err === 'timeout of 5000ms exceeded')
-    
+        return console.log(err === 'timeout of 5000ms exceeded')
 })
 
 

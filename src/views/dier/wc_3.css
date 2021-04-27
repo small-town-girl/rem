@@ -1,0 +1,144 @@
+.clearfix::after{
+    content: '';
+    display:block;
+    clear: both;
+}
+.wc_3 input{  
+	background:none;  
+	outline:none;  
+}
+.wc_3{
+    width: 100%;
+    height: 85vh;
+}
+.wc_3-header{
+    width: 100%;
+    height:60px;
+    display:flex;
+    margin-bottom:5px;
+}
+.wc_3-header-title,.kh_3-header-cj{
+    width:200px;
+    height:60px;
+}
+.wc_3-header-title h2{
+    margin-left:15px;
+    font-size: 18px;
+}
+.wc_3-header-ss{
+    width: 300px;
+    height:34px;
+    flex: 1;
+    text-align:center;
+}
+.wc_3-header-cj-1{
+    width:80px;
+    height:34px;
+    float:left;
+}
+.wc_3-header-cj-1 button{
+    margin:0;
+    padding:5px;
+    font-size:13px;
+
+}
+.wc_3-header-cj-2{
+    width:80px;
+    float:left;
+}
+.wc_3-con{
+    width:100%;
+    height:630px;
+    background-color:#fff;
+    border:1px solid #ccc;
+    overflow-x: auto;
+}
+.wc_3-con-top{
+    width:100%;
+    height:40px;
+    color:#333;
+    border:1px #ccc solid;
+    border-bottom:none;
+}
+.wc_3-con-top-1{
+   margin:5px;
+    float:left;
+}
+.wc_3-con-top-2{
+    float:left;
+}
+.wc_3-con-top-3{
+    margin:5px;
+    float:left;
+}
+.wc_3-con-top-3 button{
+    width:64px;
+    height:14px;
+    padding:0;
+    margin:0;
+    background:none;
+    border:none;
+    color:#333;
+}
+.wc_3-con-con{
+    width:100%;
+    height:580px;
+  
+}
+.wc_3-con-con-1{
+    width:1500px;
+    height:60px;
+    
+}
+.wc_3-con-con-1 ul li{
+    width:86px;
+    height:50px;
+    /* padding:15px; */
+    line-height:50px;
+    text-align:center;
+    background-color: #fafdff;
+    color: #475059;
+    border: 1px solid #e6e6e6;
+    border-color: #e6e6e6;
+    float:left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.wc_3-con-con-2{
+    width:1500px;
+    height:500px;
+}
+.wc_3-con-con-2 ul{
+    width:1500px;
+    height:50px;
+    border-bottom:1px solid #ccc;
+}
+.wc_3-con-con-2 ul li{
+    width:86px;
+    height:50px;
+    /* padding:15px; */
+    line-height:50px;
+    overflow: hidden;
+    font-size:13px;
+    text-align:center;
+    color: #333;
+    float:left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.wc_3-con-con-3{
+    height:44px;
+}
+.wc_3-footer{
+    width:100%;
+    height: 50px;
+    padding:10px 0;
+}
+.wc_3-footer ul{
+    float:right;
+}
+.wc_3-header-cj-1 input{
+    text-align:center;
+}

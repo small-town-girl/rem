@@ -1,33 +1,35 @@
-
 import React,{Component} from 'react'
-import './Crm.css'
+import './Office.css'
+
+// views视图
+import Ws1 from '../../views/Crm/ws1'
+import Ws2 from '../../views/Crm/ws2'
+import Ws3 from '../../views/Crm/ws3'
+import Ws4 from '../../views/Crm/ws4'
+import Ws5 from '../../views/Crm/ws5'
+import Ws6 from '../../views/Crm/ws6'
+import Ws7 from '../../views/Crm/ws7'
+import Ws8 from '../../views/Crm/ws8'
+import Ws9 from '../../views/Crm/ws9'
+import Ws10 from '../../views/Crm/ws10'
 
 import {Link,Route,Redirect} from 'react-router-dom'
 /* ant 组件 */
 
 import { Menu,Button} from 'antd';
 import {
-  DesktopOutlined,
-  ProfileOutlined,
   MenuUnfoldOutlined,
   MenuFoldOutlined,
-  ScheduleOutlined,
-  NotificationOutlined,
-  SolutionOutlined,
-  AuditOutlined,
-  TeamOutlined,
+  createFromIconfontCN,
 } from '@ant-design/icons';
+const MyIcon = createFromIconfontCN({
+      scriptUrl: '//at.alicdn.com/t/font_2479319_jgiw05wekk.js', // 在 iconfont.cn 上生成
+   });
 
-// views视图
-import Index from '../../views/Office/index'
-import Schedule from '../../views/Office/schedule'
-import Task from '../../views/Office/task'
-import Notice from '../../views/Office/notice'
-import Journal from '../../views/Office/journal'
-import Examine from '../../views/Office/examine'
-import Addressbook from '../../views/Office/address-book'
 
-export default class Crm extends Component{
+
+
+export default class Office extends Component{
     constructor(){
         super();
         this.state = {
@@ -54,69 +56,60 @@ export default class Crm extends Component{
       }
     render(){
         return(
-            <main className="index">
+            <main className="index" style={{height:100+'%'}}>
                 <div className="index_left">
                 <div className="leftNav" ref={this.buttonbox}>
                     <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }} className="leftNav_button" ref={this.Navbutton}>
                       {React.createElement(this.state.collapsed ? MenuFoldOutlined : MenuUnfoldOutlined)}
                     </Button>
-                    <Menu
-                      defaultSelectedKeys={[this.props.history.location.pathname]}
-                      mode="inline"
-                      theme="dark"
-                      inlineCollapsed={this.collapsed}
-                      className="ant-ul"
-                    >
-                        <Menu.Item key="/crm/index" icon={<DesktopOutlined />}>
-                          <Link to="/crm/index">仪表盘</Link>
-                        </Menu.Item>
-                    
-                        <Menu.Item key="/off/schedule" icon={<ProfileOutlined />}>
-                        <Link to="/off/schedule">代办事项</Link>
-                        </Menu.Item>
-                    
-                        <Menu.Item key="/off/task" icon={<ScheduleOutlined />}>
-                        <Link to="/off/task">线索</Link>
-                        </Menu.Item>
-                    
-                        <Menu.Item key="/off/notice" icon={<NotificationOutlined />}>
-                        <Link to="/off/notice">客户</Link>
-                        </Menu.Item>
-                    
-                        <Menu.Item key="/off/journal" icon={<SolutionOutlined />}>
-                        <Link to="/off/journal">联系人</Link>
-                        </Menu.Item>
-                    
-                        <Menu.Item key="/off/examine" icon={<AuditOutlined />}>
-                        <Link to="/off/examine">公海</Link>
-                        </Menu.Item>
-                    
-                        <Menu.Item key="/off/addressbook" icon={<TeamOutlined />}>
-                        <Link to="/off/addressbook">商机</Link>
-                        </Menu.Item>
-                        <Menu.Item key="/off/addressbook" icon={<TeamOutlined />}>
-                        <Link to="/off/addressbook">合同</Link>
-                        </Menu.Item>
-                        <Menu.Item key="/off/addressbook" icon={<TeamOutlined />}>
-                        <Link to="/off/addressbook">回款</Link>
-                        </Menu.Item>
-                        <Menu.Item key="/off/addressbook" icon={<TeamOutlined />}>
-                        <Link to="/off/addressbook">产品</Link>
-                        </Menu.Item>
+                    <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} style={{height:100+'%'}}>
+                      <Menu.Item key="1" icon={<MyIcon type="icon-yibiaopan" />}>
+                        <Link to="/crm/ws1">仪表盘</Link>
+                      </Menu.Item>
+                      <Menu.Item key="2" icon={<MyIcon type="icon-lingdang" />}>
+                        <Link to="/crm/ws2">待办事项</Link>
+                      </Menu.Item>
+                      <Menu.Item key="3" icon={<MyIcon type="icon-xiansuo" />}>
+                        <Link to="/crm/ws3">线索</Link>
+                      </Menu.Item>
+                      <Menu.Item key="4" icon={<MyIcon type="icon-kehu" />}>
+                        <Link to="/crm/ws4">客户</Link>
+                      </Menu.Item>
+                      <Menu.Item key="5" icon={<MyIcon type="icon-biaoqiankuozhan_lianxiren-379" />}>
+                        <Link to="/crm/ws5">联系人</Link>
+                      </Menu.Item>
+                      <Menu.Item key="6" icon={<MyIcon type="icon-gonghai" />}>
+                        <Link to="/crm/ws6">公海</Link>
+                      </Menu.Item>
+                      <Menu.Item key="7" icon={<MyIcon type="icon-shangji" />}>
+                        <Link to="/crm/ws7">商机</Link>
+                      </Menu.Item>
+                      <Menu.Item key="8" icon={<MyIcon type="icon-hetongliebiao" />}>
+                        <Link to="/crm/ws8">合同</Link>
+                      </Menu.Item>
+                      <Menu.Item key="9" icon={<MyIcon type="icon-huikuantixing" />}>
+                        <Link to="/crm/ws9">回款</Link>
+                      </Menu.Item>
+                      <Menu.Item key="10" icon={<MyIcon type="icon-weibiaoti1" />}>
+                        <Link to="/crm/ws10">产品</Link>
+                      </Menu.Item>
                     </Menu>
                 </div>
                 </div>
                 <div className="index_right">
                     <div style={{height: 100+'%'}}>
                         <div className="workbench">
-                            <Route path="/crm/index" component={Index}  />
-                            <Route path="/crm/schedule" component={Schedule} />
-                            <Route path="/crm/task" component={Task} />
-                            <Route path="/crm/notice" component={Notice} />
-                            <Route path="/crm/journal" component={Journal} />
-                            <Route path="/crm/examine" component={Examine} />
-                            <Route path="/crm/addressbook" component={Addressbook} />
-                            <Route path="/crm" exact render={()=> <Redirect to="/crm/index" /> } />
+                        <Route path="/crm" exact render={()=> <Redirect to="/crm/ws1" /> } />
+                        <Route path="/crm/ws2" component={Ws2} />
+                        <Route path="/crm/ws3" component={Ws3} />
+                        <Route path="/crm/ws4" component={Ws4} />
+                        <Route path="/crm/ws5" component={Ws5} />
+                        <Route path="/crm/ws6" component={Ws6} />
+                        <Route path="/crm/ws7" component={Ws7} />
+                        <Route path="/crm/ws8" component={Ws8} />
+                        <Route path="/crm/ws9" component={Ws9} />
+                        <Route path="/crm/ws10" component={Ws10} />
+                        <Route path="/crm/ws1" component={Ws1} />
                         </div>
                     </div>  
                 </div>

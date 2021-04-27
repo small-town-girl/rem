@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#components-layout-demo-side .logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.3); 
+    margin-bottom: 20px;
+  }
+  
+  .site-layout .site-layout-background {
+    background: #fff;
+   
+  }
+.ant-layout .ant-layout-header{
+    height: 0px;
+}
+ .ant-layout-content{
+     background: #f0f2f5;
+ }
+ .ant-layout-content .site-layout-background{
+    margin: 15px 16px;
+ }
+
+ .inptlist{
+     display: flex;
+     flex: 3;
+     margin-bottom: 50px;
+ }
+ .selectlist{
+     width: 130px;
+     height: 30px;
+     border: none;
+     border: 1px #ccc solid;
+     margin:0px 20px ;
+    outline: none;
+ }
+.inptlist .btn{
+    background: #4085e7;
+    padding: 5px 10px;
+    color:snow;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.ant-table{
+    border: 1px #ccc solid;
+}
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td{
+    border: 1px #ccc solid;
+}
+.ant-table-pagination{
+    display: none;
+}

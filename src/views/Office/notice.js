@@ -3,7 +3,7 @@ import { Tabs } from 'antd';
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
 import { DatePicker, Space } from 'antd';
-import axios from 'axios'
+import instance from '../../sercice/request'
 import {Select} from 'antd';
 
 const { Option } = Select;
@@ -35,18 +35,16 @@ const [isModalVisible, setIsModalVisible] = useState(false);
   }
    
   const [listt,setlistt]=useState([])
-  axios.post('http://crm.cimns.com/index.php/oa/announcement/index',{
+  instance.post('http://crm.cimns.com/index.php/oa/announcement/index',{
     type: 1,
     page: 1,
     limit: 15
   }).then((data)=> {
-    if(data.data.code===200){
+    if(data.code===200){
         if(listt.length <= 0){  
           //   console.log(data.data.data.list);
-            setlistt(data.data.data.list)
+            setlistt(data.data.list)
         }
-    }else{
-      console.log('off4失败');
     }
   })
  

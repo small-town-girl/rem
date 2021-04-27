@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.clearfix::after{
+    content: '';
+    display:block;
+    clear: both;
+}
+.wc_2{
+    width:100%;
+    height:83.9vh;
+}
+.wc_2-header{
+    width:100%;
+    height:45px;
+    padding:0 20px;
+}
+.wc_2-header h2{
+    font-size:18px;
+    color:#333;
+}
+.wc_2-routebox{
+    width:100%;
+    height:90vh;
+}
+
+.wc_2-route{
+    width:20%;
+    font-size: 14px;
+    background-color: #fff;
+    bottom: 0;
+    z-index: 1;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    overflow-y: auto;
+    float:left;
+}
+.wc_2-r{
+    width:70%;
+    height:81vh;
+    float:left;
+}
+

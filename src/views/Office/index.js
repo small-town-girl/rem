@@ -257,13 +257,11 @@ class Index extends Component{
             if(status === 1){
                 if(!this.props.data) return;
                 let data = this.props.data
-                console.log(data)
                 let newData = [];
                 data.forEach(item => {
                     const ddd = item
                     newData.push(ddd)
                 });
-                console.log(newData)
                 const newdata = newData.map((item,index)=>{
                         return(
                             <div key={index} className="list">

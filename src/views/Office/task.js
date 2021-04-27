@@ -1,5 +1,6 @@
 
 import { Tabs } from 'antd';
+import instance from '../../sercice/request'
 
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
@@ -37,7 +38,7 @@ const [isModalVisible, setIsModalVisible] = useState(false);
     const [arr,setarr] = useState([])
     const [list,setlist] = useState([])
     const [list2,setlist2] = useState([])
-  axios.post('http://crm.cimns.com/index.php/oa/task/myTask',{
+    instance.post('http://crm.cimns.com/index.php/oa/task/myTask',{
     type: '',
     status: 1,
     priority: 'all',
@@ -47,27 +48,23 @@ const [isModalVisible, setIsModalVisible] = useState(false);
     page: 1
     
     }).then((data)=>{
-      if(data.data.code===200){
+      if(data.code===200){
           if(arr.length<=0){
-            let arr2 = data.data.data.list
+            let arr2 = data.data.list
             setarr(arr2)
           }
-      }else{
-        console.log('off失败');
       }
     })
-    axios.post('http://crm.cimns.com/index.php/admin/users/getUserList',{}).then((data)=>{
-      if(data.data.code===200){
+    instance.post('http://crm.cimns.com/index.php/admin/users/getUserList',{}).then((data)=>{
+      if(data.code===200){
           if(list.length<=0){
             //   console.log(data.data.data);
-            setlist(data.data.data)
+            setlist(data.data)
           }
           
-      }else{
-        console.log('off失败');
       }
     })
-    axios.post('http://crm.cimns.com/index.php/oa/task/subTaskList',{
+    instance.post('http://crm.cimns.com/index.php/oa/task/subTaskList',{
         type: '',
         status: 1,
         priority: 'all',
@@ -78,13 +75,10 @@ const [isModalVisible, setIsModalVisible] = useState(false);
 
 
     }).then((data)=>{
-      if(data.data.code===200){
+      if(data.code===200){
           if(list2.length<=0){
-            setlist2(data.data.data.list)
+            setlist2(data.data.list)
           }
-          
-      }else{
-        console.log('off失败');
       }
     })
     function data(item){

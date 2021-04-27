@@ -4,6 +4,7 @@ import { Tabs } from 'antd';
 import React, { useState } from 'react';
 import { Modal, Button } from 'antd';
 import { DatePicker, Space } from 'antd';
+import instance from '../../sercice/request'
 import axios from 'axios'
 import {Select} from 'antd';
 
@@ -40,37 +41,29 @@ const [isModalVisible, setIsModalVisible] = useState(false);
    const [arr,setarr] = useState([])
    const [arr2,setarr2] = useState([])
 
-   axios.post('http://crm.cimns.com/index.php/oa/examine/index',{
-    by: 'my',
-    limit: 15,
-    category_id:'', 
-    check_status: 'all',
-    page: 1
-  }).then((data)=> {
-    if(data.data.code===200){
-        if(arr.length <= 0){  
-          //   console.log(data.data.data.list);
-            setarr(data.data.data.list)
-        }
-    }else{
-      console.log('off4失败');
-    }
+   instance.post('http://crm.cimns.com/index.php/oa/examine/index','by:my&limit:15&category_id:&check_status:0&page:1').then((data)=> {
+    if(!data) return;
+    console.log(1)
+    // if(data.code===200){
+    //     if(arr.length <= 0){  
+    //         setarr(data.data.list)
+    //     }
+    // }
   })
-  axios.post('http://crm.cimns.com/index.php/oa/examine/index',{
+  instance.post('http://crm.cimns.com/index.php/oa/examine/index',{
     by: 'stay_examine',
     limit: 15,
     category_id: '',
     check_status: 'all',
     page: 1
   }).then((data)=> {
-    if(data.data.code===200){
-        if(arr2.length <= 0){  
-          //   console.log(data.data.data.list);
-            setarr2(data.data.data.list)
-        }
-    }else{
-      console.log('off4失败');
-    }
+      if(!data) return;
+      console.log(1)
+    // if(data.code===200){
+    //     if(arr2.length <= 0){  
+    //         setarr2(data.data.list)
+    //     }
+    // }
   })
  
     return(

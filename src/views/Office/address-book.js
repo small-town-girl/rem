@@ -4,7 +4,6 @@ import instance from '../../sercice/request'
 
 import { Tabs } from 'antd';
 import { Collapse } from 'antd';
-import { normalizeUnits } from '_moment@2.29.1@moment';
 const { TabPane } = Tabs;
 
 function callback(key) {

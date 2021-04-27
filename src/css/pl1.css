@@ -1,0 +1,145 @@
+.no1_2_box{
+    width: 100%;
+    height: 630px;
+    background: #fff;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+  .no1_2_nav{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    /* padding-top: 15px; */
+    margin-bottom: 2px;
+    border-radius: 4px 4px 0 0 ;
+  }
+  .no1_1_navtop{
+    width: 33%;
+    height: 60px;
+    background:#fff;
+    padding-left: 10px;
+    padding-top: 20px;
+    
+    float: left;
+  } 
+  .navtop_left{
+    box-sizing: border-box;
+    margin: 0;
+    width: 60px;
+    margin-left: 40px;
+    height:35px;
+    padding: 0 .6em;
+    font-size: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    margin-right: 100px;
+    border: 1px solid #ccc;
+  
+    outline: none;
+    border-radius: 5px;
+  }
+  .navtop_rigth{
+    box-sizing: border-box;
+    margin: 0;
+    width: 60px;
+    height: 35px;
+    padding: 0.6em;
+    font-size: 1em;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-left:2px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+  }
+  .bg{
+    background: #3e84e9;
+    color: #fff;
+  }
+  .nav_center{
+    width: 33%;
+    height: 60px;
+    float: left;
+    padding-top: 20px;
+    border-radius: 0px 0px 4px 4px;
+  }
+  .zs{
+    width: 33%;
+    line-height: 35px;  
+    float: left;
+    text-align: center;
+  }
+  .zs button{
+    border: none;
+    outline: none;
+    background-color: #fff;
+  }
+  .zz button{
+    border: none;
+    outline: none;
+    background-color: #fff;
+  }
+  .zz{
+    width: 33%;
+    line-height: 35px;
+    float: left;
+    text-align: center;
+  }
+  .rq{
+    width: 33%;
+    line-height: 35px;
+    float: left;
+    text-align: center;
+  }
+  .nav_rigth{
+    width: 33%;
+    height: 60px;
+    float: right;
+    background-color:#fff;
+  }
+  
+  .ant-btn-primary{
+    margin-left: 300px;
+    margin-top:20px;
+  }
+  .nav_box {
+    z-index: 20;
+  }
+  .ass{
+    width:50%;
+    height: 30px;
+    border: 1px solid #ccc;
+    margin-left: 25px;
+  }
+  .acc{
+    margin-left: 64px;
+  }
+  .app{
+    margin-left: 50px;
+  }
+  .acc:hover{
+    border: 1px solid red;
+  }
+  .app:hover{
+    border: 1px solid red;
+  }
+  
+  .azz{
+    margin-left: 40px;
+  }
+  
+  .no2_2_axx{
+    width: 100%;
+    height: 150px;
+    outline: none;
+  }
+  .no1_2_zzzzz{
+    display: inline-block;
+    margin-right: 50px;
+  }
+  .no1_2_guanlian{
+    margin-top: 30px;
+  }

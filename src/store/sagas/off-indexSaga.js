@@ -1,4 +1,4 @@
-import { call, put, takeEvery } from "_redux-saga@1.1.3@redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
 import { actions,listCount } from "../../constant";
 import instance from "../../sercice/request";
 

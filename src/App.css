@@ -560,7 +560,6 @@
 
 .off3 {
   position: relative;
-  width: 1200px;
 }
 .off3-btn {
   position: absolute !important;
@@ -936,4 +935,13 @@
 }
 .ly17-end {
   overflow: hidden;
+}
+.tc-2-end {
+  height: 630px;
+  overflow: auto;
+  padding: 20px;
+}
+.offs-contb {
+  height: 630px;
+  overflow: auto;
 }

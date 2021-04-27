@@ -11,7 +11,7 @@ import { createFromIconfontCN,UserOutlined} from '@ant-design/icons';
 import Office from './NavView/Office'
 import Crm from './NavView/Crm'
 import Smart from './NavView/Smart'
-import Items from './NavView/Items'
+import Items from './NavView/ltems'
 import Space from './NavView/Space.js'
 import { connect } from 'react-redux';
 

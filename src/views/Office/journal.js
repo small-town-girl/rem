@@ -2,7 +2,7 @@
 // export default Journal
 
 import { Tabs, Button, Space,  Modal, Select, DatePicker } from 'antd';
-import axios from 'axios';
+import instance from '../../sercice/request'
 import { useState } from 'react'
 const { TabPane } = Tabs;
 const { Option } = Select;
@@ -26,7 +26,7 @@ function Journal(props) {
     }
     
 
-    axios.post('http://crm.cimns.com/index.php/admin/users/getUserList').then((data) => {
+    instance.post('http://crm.cimns.com/index.php/admin/users/getUserList').then((data) => {
         if (data.data.code === 200) {
             if (lolp.length <= 0) {
                 setlolp(data.data.data)
@@ -37,35 +37,29 @@ function Journal(props) {
     })
     // console.log(lolp);
     // 日志 
-    axios.post('http://crm.cimns.com/index.php/oa/log/index', {
+    instance.post('http://crm.cimns.com/index.php/oa/log/index', {
         create_time: '',
         page: 1,
         limit: 15,
         by:'',
     }).then((data) => {
-        if (data.data.code === 200) {
+        if (data.code === 200) {
             if (arr.length <= 0) {
-                setarr(data.data.data.list)
-                //   console.log(data.data.data.list);
+                setarr(data.data.list)
             }
-        } else {
-            console.log('off失败');
-        }
+        } 
     })
 
-    axios.post('http://crm.cimns.com/index.php/oa/log/index',{
+    instance.post('http://crm.cimns.com/index.php/oa/log/index',{
         create_time: '',
         page: 1,
         limit: 15,
         by: 'me'
     }).then((data) => {
-        if (data.data.code === 200) {
+        if (data.code === 200) {
             if (text.length <= 0) {
-                settext(data.data.data.list)
-                console.log(text);
+                settext(data.data.list)
             }
-        } else {
-            console.log('off3失败');
         }
     })
     function showModal() {
@@ -74,7 +68,6 @@ function Journal(props) {
     function handleOk() {
         setvisible(false)
     };
-    console.log(text);
     return (
         <div className="cont-rgt" style={{backgroundColor:'#fff',width:100+'%'}}>
             <div className="off3 off5">
@@ -115,23 +108,23 @@ function Journal(props) {
                             <div className="offs-contb">
                                     {arr.map((itm, ine) => {
                                         return (
-                                            <li key={ine}>
+                                            <li key={ine} style={{overflow:'hidden',marginBottom:20}}>
                                                 <div className="item">
                                                     <div className="ite-top">
                                                         <div className="ite-let">
-                                                            <div className="img"><img src={itm.create_user_info.thumb_img} alt=""></img></div>
-                                                            <div className="txt">
+                                                            <div className="img" style={{float:'left'}}><img src={itm.create_user_info.thumb_img} alt="" style={{width:25,borderRadius:17.5}}></img></div>
+                                                            <div className="txt" style={{marginLeft:50,textAlign:'left'}}>
                                                                 <p>{itm.create_user_info.realname} <span>已读</span></p>
                                                                 <p>2021-04-08 14:47 0个部门，1个同事</p>
                                                             </div>
                                                         </div>
-                                                        <div className="ite-com">
+                                                        <div className="ite-com" style={{textAlign:'left'}}>
                                                             <p>今日工作内容： <span>{itm.content}</span></p>
                                                             <p>明日工作内容：<span>{itm.tomorrow}</span></p>
                                                             <p>遇到的问题：<span>{itm.question}</span></p>
                                                         </div>
                                                     </div>
-                                                    <div className="replys">
+                                                    <div className="replys" style={{textAlign:'left'}}>
                                                         <div className="reply"><button onClick={() => {
                                                             tpl = !tpl;
                                                         }}><i className="iconfont">&#xe6a8;</i>回复</button></div>
@@ -171,23 +164,23 @@ function Journal(props) {
                             <div className="offs-contb">
                                     {text.map((itm, ine) => {
                                         return (
-                                            <li key={ine}>
+                                            <li key={ine} style={{overflow:'hidden',marginBottom:20}}>
                                                 <div className="item">
                                                     <div className="ite-top">
                                                         <div className="ite-let">
-                                                            <div className="img"><img src={itm.create_user_info.thumb_img} alt=""></img></div>
-                                                            <div className="txt">
+                                                            <div className="img" style={{float:'left'}}><img src={itm.create_user_info.thumb_img} alt="" style={{width:25,borderRadius:17.5}}></img></div>
+                                                            <div className="txt" style={{marginLeft:50,textAlign:'left'}}>
                                                                 <p>{itm.create_user_info.realname} <span>已读</span></p>
                                                                 <p>2021-04-08 14:47 0个部门，1个同事</p>
                                                             </div>
                                                         </div>
-                                                        <div className="ite-com">
+                                                        <div className="ite-com" style={{textAlign:'left'}}>
                                                             <p>今日工作内容： <span>{itm.content}</span></p>
                                                             <p>明日工作内容：<span>{itm.tomorrow}</span></p>
                                                             <p>遇到的问题：<span>{itm.question}</span></p>
                                                         </div>
                                                     </div>
-                                                    <div className="replys">
+                                                    <div className="replys" style={{textAlign:'left'}}>
                                                         <div className="reply"><button onClick={() => {
                                                             tpl = !tpl;
                                                         }}><i className="iconfont">&#xe6a8;</i>回复</button></div>
@@ -275,23 +268,23 @@ function Journal(props) {
                             <div className="offs-contb">
                                     {arr.map((itm, ine) => {
                                         return (
-                                            <li key={ine}>
+                                            <li key={ine} style={{overflow:'hidden',marginBottom:20}}>
                                                 <div className="item">
                                                     <div className="ite-top">
                                                         <div className="ite-let">
-                                                            <div className="img"><img src={itm.create_user_info.thumb_img} alt=""></img></div>
-                                                            <div className="txt">
+                                                            <div className="img" style={{float:'left'}}><img src={itm.create_user_info.thumb_img} alt="" style={{width:25,borderRadius:17.5}}></img></div>
+                                                            <div className="txt" style={{marginLeft:50,textAlign:'left'}}>
                                                                 <p>{itm.create_user_info.realname} <span>未读</span></p>
                                                                 <p>2021-04-08 14:47 0个部门，1个同事</p>
                                                             </div>
                                                         </div>
-                                                        <div className="ite-com">
+                                                        <div className="ite-com" style={{textAlign:'left'}}>
                                                             <p>今日工作内容： <span>{itm.content}</span></p>
                                                             <p>明日工作内容：<span>{itm.tomorrow}</span></p>
                                                             <p>遇到的问题：<span>{itm.question}</span></p>
                                                         </div>
                                                     </div>
-                                                    <div className="replys">
+                                                    <div className="replys" style={{textAlign:'left'}}>
                                                         <div className="reply"><button onClick={() => {
                                                             tpl = !tpl;
                                                         }}><i className="iconfont">&#xe6a8;</i>回复</button></div>
